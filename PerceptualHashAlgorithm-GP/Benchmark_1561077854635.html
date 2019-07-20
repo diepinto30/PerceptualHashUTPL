@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Algorithm Benchmarking</title>
+		<style>
+			html{min-height:100%;}
+			body{min-height:100%; margin: 0; background: linear-gradient(45deg, #49a09d, #5f2c82); font-family: sans-serif; font-weight: 100; margin-bottom:25px;}
+			table{margin:auto; border-collapse: collapse; box-shadow: 0 0 20px rgba(0,0,0,0.1); margin-top:40px;}
+			thead th, td:first-child, .category{background-color: #55608f;}
+			tr:nth-child(1) {background-color:#3d54b9;}
+			th,td{padding: 10px;background-color: rgba(255,255,255,0.2);color: #fff;}
+			tbody tr:hover{background-color: rgba(255,255,255,0.3);}
+			.spacerRow td{ padding:7px;}
+			.circle{width:10px; height: 10px; background-color:green; border-radius:50%; display:inline-block; margin-right:5px;}
+			.fault{color:#fff700;}
+		</style>
+	</head>
+	<body>
+		<div>
+<table id='rootTable'>
+<thead><tr> <th>Images</th> <th>Category</th> <th colspan=9>Distance</th> </tr></thead>
+<tbody><tr><td colspan = 2></td><td id='89784966'>AverageHash [8]</td><td id='89877222'>AverageHash [32]</td><td id='89938726'>AverageHash [64]</td><td id='-1429398277'>PerceptiveHash [32]</td><td id='-1421771781'>PerceptiveHash [64]</td><td id='-847185497'>MedianHash [32]</td><td id='-847123993'>MedianHash [64]</td><td id='831361513'>DifferenceHash [64]</td><td id='-1785745412'>DifferenceHash [32]</td></tr>
+<tr><td colspan = 2><b>Actual Resolution:</b></td><td>9bits</td><td>36bits</td><td>64bits</td><td>36bits</td><td>64bits</td><td>36bits</td><td>64bits</td><td>72bits</td><td>101bits</td></tr>
+<tr><td colspan = 2><b>Threshold:</b></td><td>0,400</td><td>0,400</td><td>0,400</td><td>0,400</td><td>0,400</td><td>0,400</td><td>0,400</td><td>0,400</td><td>0,400</td></tr>
+<tr class='spacerRow'><td colspan='2'></td><td colspan='9'></td></tr>
+<tr><td>ballon-copyright</td><td class='category'>[0-1]</td><td class=''>0,556</td><td class=''>0,528</td><td class=''>0,562</td><td class=''>0,583</td><td class=''>0,500</td><td class=''>0,472</td><td class=''>0,562</td><td class=''>0,458</td><td class='fault'>0,386</td></tr>
+<tr><td>ballon-highQuality</td><td class='category'>[0-1]</td><td class=''>0,667</td><td class=''>0,583</td><td class=''>0,562</td><td class=''>0,528</td><td class=''>0,531</td><td class=''>0,528</td><td class=''>0,562</td><td class=''>0,458</td><td class='fault'>0,366</td></tr>
+<tr><td>ballon-lowQuality</td><td class='category'>[0-1]</td><td class=''>0,667</td><td class=''>0,583</td><td class=''>0,547</td><td class=''>0,556</td><td class=''>0,500</td><td class=''>0,528</td><td class=''>0,547</td><td class=''>0,500</td><td class='fault'>0,376</td></tr>
+<tr><td>ballon-thumbnail</td><td class='category'>[0-1]</td><td class=''>0,667</td><td class=''>0,556</td><td class=''>0,578</td><td class=''>0,528</td><td class=''>0,578</td><td class=''>0,472</td><td class=''>0,562</td><td class=''>0,528</td><td class=''>0,426</td></tr>
+<tr class='spacerRow'><td colspan='2'></td><td colspan='9'></td></tr>
+<tr><td>copyright-highQuality</td><td class='category'>[1-1]</td><td class=''>0,111</td><td class=''>0,056</td><td class=''>0,000</td><td class=''>0,056</td><td class=''>0,062</td><td class=''>0,056</td><td class=''>0,000</td><td class=''>0,028</td><td class=''>0,059</td></tr>
+<tr><td>copyright-lowQuality</td><td class='category'>[1-1]</td><td class=''>0,111</td><td class=''>0,111</td><td class=''>0,109</td><td class=''>0,028</td><td class=''>0,062</td><td class=''>0,111</td><td class=''>0,109</td><td class=''>0,125</td><td class=''>0,149</td></tr>
+<tr><td>copyright-thumbnail</td><td class='category'>[1-1]</td><td class=''>0,111</td><td class=''>0,139</td><td class=''>0,234</td><td class=''>0,111</td><td class=''>0,141</td><td class=''>0,056</td><td class=''>0,250</td><td class=''>0,236</td><td class=''>0,238</td></tr>
+<tr><td>highQuality-lowQuality</td><td class='category'>[1-1]</td><td class=''>0,000</td><td class=''>0,056</td><td class=''>0,109</td><td class=''>0,028</td><td class=''>0,062</td><td class=''>0,056</td><td class=''>0,109</td><td class=''>0,125</td><td class=''>0,109</td></tr>
+<tr><td>highQuality-thumbnail</td><td class='category'>[1-1]</td><td class=''>0,000</td><td class=''>0,083</td><td class=''>0,234</td><td class=''>0,111</td><td class=''>0,109</td><td class=''>0,056</td><td class=''>0,250</td><td class=''>0,236</td><td class=''>0,218</td></tr>
+<tr><td>lowQuality-thumbnail</td><td class='category'>[1-1]</td><td class=''>0,000</td><td class=''>0,083</td><td class=''>0,312</td><td class=''>0,083</td><td class=''>0,109</td><td class=''>0,111</td><td class=''>0,266</td><td class=''>0,194</td><td class=''>0,149</td></tr>
+<tr class='spacerRow'><td colspan='2'></td><td colspan='9'></td></tr>
+<tr><td colspan = 2><b>Avg match:</b></td><td>0,056</td><td>0,088</td><td>0,167</td><td>0,069</td><td>0,091</td><td>0,074</td><td>0,164</td><td>0,157</td><td>0,153</td></tr>
+<tr><td colspan = 2><b>Avg distinct:</b></td><td>0,639</td><td>0,562</td><td>0,562</td><td>0,549</td><td>0,527</td><td>0,500</td><td>0,559</td><td>0,486</td><td>0,389</td></tr>
+<tr><td colspan = 2><b>Min/Max match:</b></td><td>0,000/0,111</td><td>0,056/0,139</td><td>0,000/0,312</td><td>0,028/0,111</td><td>0,062/0,141</td><td>0,056/0,111</td><td>0,000/0,266</td><td>0,028/0,236</td><td>0,059/0,238</td></tr>
+<tr><td colspan = 2><b>Min/Max distinct:</b></td><td>0,556/0,667</td><td>0,528/0,583</td><td>0,547/0,578</td><td>0,528/0,583</td><td>0,500/0,578</td><td>0,472/0,528</td><td>0,547/0,562</td><td>0,458/0,528</td><td>0,366/0,426</td></tr>
+<tr><td colspan = 2><b>True Positive / False Positive</b></td><td>6/0</td><td>6/0</td><td>6/0</td><td>6/0</td><td>6/0</td><td>6/0</td><td>6/0</td><td>6/0</td><td>6/3</td></tr>
+<tr><td colspan = 2><b>False Negative / True Negative</b></td><td>0/4</td><td>0/4</td><td>0/4</td><td>0/4</td><td>0/4</td><td>0/4</td><td>0/4</td><td>0/4</td><td>0/1</td></tr>
+<tr><td colspan = 2><b>Accuracy</b></td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>0,700</td></tr>
+<tr><td colspan = 2><b>Precision</b></td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>0,667</td></tr>
+<tr><td colspan=2><b>Timming</b> (ms/picture): *</td><td>0,052 ms</td><td>0,050 ms</td><td>0,052 ms</td><td>0,268 ms</td><td>0,201 ms</td><td>0,092 ms</td><td>0,108 ms</td><td>0,064 ms</td><td>0,064 ms</td></tr><tfoot><tr><td  style='text-align:center;' colspan =11>* Please note that speed benchmarks are not representative and should only be used to get a rough estimated of the magnitude of the speed.</td></tr></tfoot></tbody></table><script src="/Users/diepinto30/Documents/Repositorios%20GIT/Github/GP3.2%20Algoritmo%20Hash%20/JImageHash/target/classes/Chart.bundle.min.js"></script><div style='width:40%; margin:auto;'>
+<canvas id ='chartCanvas' width='600' height='400' style='background-color:' />
+</div>
+<script>
+var dataDictMatch = {};
+dataDictMatch['-1785745412']=[{x:0.0,y:1},{x:0.1,y:3},{x:0.2,y:2},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['831361513']=[{x:0.0,y:1},{x:0.1,y:3},{x:0.2,y:2},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['-1429398277']=[{x:0.0,y:4},{x:0.1,y:2},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['-847123993']=[{x:0.0,y:1},{x:0.1,y:2},{x:0.2,y:3},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['-847185497']=[{x:0.0,y:4},{x:0.1,y:2},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['89938726']=[{x:0.0,y:1},{x:0.1,y:2},{x:0.2,y:2},{x:0.3,y:1},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['-1421771781']=[{x:0.0,y:3},{x:0.1,y:3},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['89784966']=[{x:0.0,y:3},{x:0.1,y:3},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictMatch['89877222']=[{x:0.0,y:4},{x:0.1,y:2},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+var dataDictDistinct = {};
+dataDictDistinct['-1785745412']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:3},{x:0.4,y:1},{x:0.5,y:0},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['831361513']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:2},{x:0.5,y:2},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['-1429398277']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:4},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['-847123993']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:4},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['-847185497']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:2},{x:0.5,y:2},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['89938726']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:4},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['-1421771781']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:4},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['89784966']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:1},{x:0.6,y:3},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+dataDictDistinct['89877222']=[{x:0.0,y:0},{x:0.1,y:0},{x:0.2,y:0},{x:0.3,y:0},{x:0.4,y:0},{x:0.5,y:4},{x:0.6,y:0},{x:0.7,y:0},{x:0.8,y:0},{x:0.9,y:0}];
+var dataDictScatter = {};
+dataDictScatter['-1785745412']=[{x:0.0594059405940594,y:0.0},{x:0.1485148514851485,y:0.5},{x:0.2376237623762376,y:1.0},{x:0.10891089108910891,y:1.5},{x:0.21782178217821782,y:2.0},{x:0.1485148514851485,y:2.5},,{x:0.38613861386138615,y:0.0},{x:0.36633663366336633,y:0.5},{x:0.37623762376237624,y:1.0},{x:0.42574257425742573,y:1.5}];
+dataDictScatter['831361513']=[{x:0.027777777777777776,y:0.0},{x:0.125,y:0.5},{x:0.2361111111111111,y:1.0},{x:0.125,y:1.5},{x:0.2361111111111111,y:2.0},{x:0.19444444444444445,y:2.5},,{x:0.4583333333333333,y:0.0},{x:0.4583333333333333,y:0.5},{x:0.5,y:1.0},{x:0.5277777777777778,y:1.5}];
+dataDictScatter['-1429398277']=[{x:0.05555555555555555,y:0.0},{x:0.027777777777777776,y:0.5},{x:0.1111111111111111,y:1.0},{x:0.027777777777777776,y:1.5},{x:0.1111111111111111,y:2.0},{x:0.08333333333333333,y:2.5},,{x:0.5833333333333334,y:0.0},{x:0.5277777777777778,y:0.5},{x:0.5555555555555556,y:1.0},{x:0.5277777777777778,y:1.5}];
+dataDictScatter['-847123993']=[{x:0.0,y:0.0},{x:0.109375,y:0.5},{x:0.25,y:1.0},{x:0.109375,y:1.5},{x:0.25,y:2.0},{x:0.265625,y:2.5},,{x:0.5625,y:0.0},{x:0.5625,y:0.5},{x:0.546875,y:1.0},{x:0.5625,y:1.5}];
+dataDictScatter['-847185497']=[{x:0.05555555555555555,y:0.0},{x:0.1111111111111111,y:0.5},{x:0.05555555555555555,y:1.0},{x:0.05555555555555555,y:1.5},{x:0.05555555555555555,y:2.0},{x:0.1111111111111111,y:2.5},,{x:0.4722222222222222,y:0.0},{x:0.5277777777777778,y:0.5},{x:0.5277777777777778,y:1.0},{x:0.4722222222222222,y:1.5}];
+dataDictScatter['89938726']=[{x:0.0,y:0.0},{x:0.109375,y:0.5},{x:0.234375,y:1.0},{x:0.109375,y:1.5},{x:0.234375,y:2.0},{x:0.3125,y:2.5},,{x:0.5625,y:0.0},{x:0.5625,y:0.5},{x:0.546875,y:1.0},{x:0.578125,y:1.5}];
+dataDictScatter['-1421771781']=[{x:0.0625,y:0.0},{x:0.0625,y:0.5},{x:0.140625,y:1.0},{x:0.0625,y:1.5},{x:0.109375,y:2.0},{x:0.109375,y:2.5},,{x:0.5,y:0.0},{x:0.53125,y:0.5},{x:0.5,y:1.0},{x:0.578125,y:1.5}];
+dataDictScatter['89784966']=[{x:0.1111111111111111,y:0.0},{x:0.1111111111111111,y:0.5},{x:0.1111111111111111,y:1.0},{x:0.0,y:1.5},{x:0.0,y:2.0},{x:0.0,y:2.5},,{x:0.5555555555555556,y:0.0},{x:0.6666666666666666,y:0.5},{x:0.6666666666666666,y:1.0},{x:0.6666666666666666,y:1.5}];
+dataDictScatter['89877222']=[{x:0.05555555555555555,y:0.0},{x:0.1111111111111111,y:0.5},{x:0.1388888888888889,y:1.0},{x:0.05555555555555555,y:1.5},{x:0.08333333333333333,y:2.0},{x:0.08333333333333333,y:2.5},,{x:0.5277777777777778,y:0.0},{x:0.5833333333333334,y:0.5},{x:0.5833333333333334,y:1.0},{x:0.5555555555555556,y:1.5}];
+var dataDictCenter = {};
+dataDictCenter['-1785745412']=[0.27103960396039606];
+dataDictCenter['831361513']=[0.32175925925925924];
+dataDictCenter['-1429398277']=[0.3090277777777778];
+dataDictCenter['-847123993']=[0.361328125];
+dataDictCenter['-847185497']=[0.28703703703703703];
+dataDictCenter['89938726']=[0.3645833333333333];
+dataDictCenter['-1421771781']=[0.3092447916666667];
+dataDictCenter['89784966']=[0.3472222222222222];
+dataDictCenter['89877222']=[0.3252314814814815];
+ Chart.defaults.global.defaultFontColor='white';
+var canvas = document.getElementById('chartCanvas').getContext('2d')
+var chart = new Chart(canvas, {
+	data: {
+
+		datasets: [{
+
+				label: 'points',
+				type: 'scatter',
+				fill: false,
+				showLine: false,
+				pointRadius: 5,
+				backgroundColor: 'orange'
+			},
+			{
+				type: 'line',
+				label: 'match',
+				steppedLine: true,
+				pointRadius: 0,
+				backgroundColor: 'rgba(32,178,170,0.65)'
+				},
+			{
+				type: 'line',
+				label: 'distinct',
+				steppedLine: true,
+				pointRadius: 0,
+				backgroundColor: 'rgba(250,128,114,0.8)'
+			}
+		]
+	},
+	options: {
+		responsive: true,
+		scales: {
+				yAxes: [{
+					gridLines: {
+						color: 'white'
+					},
+					scaleLabel: {
+						display: true,
+						labelString: 'Occurances',
+					}
+				}],
+				xAxes: [{
+					type:'linear',
+					gridLines: {
+						color: 'white'
+					},
+					ticks: {
+						min:0,
+						max:1,
+						stepSize:0.1
+					},
+					scaleLabel: {
+						display: true,
+						labelString: 'Distance',
+					}
+				}]
+			},
+		title:{
+			display:true,
+			text: 'Test'
+		}
+	}
+})
+var table = document.getElementById('rootTable');
+var lastIndex = -1;
+var lastObject = undefined;
+table.addEventListener('mousemove',function(e){
+	var parentTr = e.path[1];
+	var target = e.path[0];
+	if(target == lastObject){
+		return;
+	}
+	lastObject = target;
+	var correctCellIndex = 0;
+	//Fix: Compute correct cellindex due to colspans
+	for(let cell of parentTr.cells){
+ 		if(cell == target){
+			break;
+		}else{
+			correctCellIndex += cell.colSpan;
+		}
+	}
+	if(correctCellIndex != lastIndex) {
+		lastIndex = correctCellIndex;
+		//First tr in tbody with cellIndex - 1
+		var id = table.rows[1].cells[correctCellIndex-1].id
+		if(id === undefined){
+			return;
+		}
+
+		//Repopulate table
+
+		chart.options.title.text = table.rows[1].cells[correctCellIndex-1].innerText;
+
+		chart.data.datasets[1].data = dataDictMatch[id];
+		chart.data.datasets[2].data = dataDictDistinct[id];
+		chart.data.datasets[0].data = dataDictScatter[id];
+		chart.config.verticalMarker = dataDictCenter[id]
+		chart.update();
+	}
+const verticalLinePlugin = {
+  getLinePosition: function (chart, value) {
+		return chart.scales['x-axis-0'].getPixelForValue(value);  },
+  renderVerticalLine: function (chartInstance, xValue) {
+      const lineLeftOffset = this.getLinePosition(chartInstance, xValue);
+      const scale = chartInstance.scales['y-axis-0'];
+      const context = chartInstance.chart.ctx;
+
+      // render vertical line
+      context.beginPath();
+      context.strokeStyle = 'white';
+      context.lineWidth = 2;
+      context.moveTo(lineLeftOffset, scale.top);
+      context.lineTo(lineLeftOffset, scale.bottom);
+      context.stroke();
+
+      // write label
+  },
+
+  afterDatasetsDraw: function (chart, easing) {
+      if (chart.config.verticalMarker) {
+          chart.config.verticalMarker.forEach(xValue => this.renderVerticalLine(chart, xValue));
+      }
+  }
+  };
+
+  Chart.plugins.register(verticalLinePlugin);
+});</script>
+</div>
+	</body>
+</html>
