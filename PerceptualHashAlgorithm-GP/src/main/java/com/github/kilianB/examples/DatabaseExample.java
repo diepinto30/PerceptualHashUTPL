@@ -1,13 +1,12 @@
 package com.github.kilianB.examples;
 
-import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.net.URL;
 import java.util.PriorityQueue;
-
+import java.io.File;
 import com.github.kilianB.datastructures.tree.Result;
 import com.github.kilianB.hashAlgorithms.AverageHash;
 import com.github.kilianB.hashAlgorithms.DifferenceHash;
@@ -40,7 +39,7 @@ public class DatabaseExample {
 		 * createDatabaseViaCredentials(). So we can simply reuse the hashes without re
 		 * adding the images.
 		 */
-		connectViaConnectionObject();
+		//connectViaConnectionObject();
 
 		// 2. retrieve image matcher from database
 

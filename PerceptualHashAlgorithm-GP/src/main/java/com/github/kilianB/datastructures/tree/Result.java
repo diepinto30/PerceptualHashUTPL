@@ -60,7 +60,7 @@ public class Result<T> implements Comparable<Result<T>> {
 
 	@Override
 	public String toString() {
-		return String.format("Result Distance:%.3f Normalized Distance %.3f, Value:%s", distance, normalizedHammingDistance, value);
+		return String.format("Distancia del resultado: %.3f Distancia normalizada: %.3f, Valor o Img valorada: %s", distance, normalizedHammingDistance, value);
 	}
 
 }
